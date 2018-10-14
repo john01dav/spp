@@ -147,7 +147,8 @@ int main(int argc, char *argv[]) {
             commandListFile = argv[1];
             break;
         default:
-            std::cerr << "Usage: " << argv[0] << "</path/to/command-list> [threads]" << std::endl;
+            std::cerr << "Usage: " << argv[0] << " </path/to/command-list> [threads]" << std::endl;
+            return -1;
     }
 
     Threader threader(commandListFile, threadCount);
